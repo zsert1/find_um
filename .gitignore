@@ -1,7 +1,7 @@
 # See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
 
 # dependencies
-/find_um/node_modules
+/froent_end/node_modules
 /.pnp
 .pnp.js
 
