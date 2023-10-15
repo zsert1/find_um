@@ -1,8 +1,8 @@
 import React from "react";
 
-const singUp=()=>{
+const SingUp=()=>{
     return <div>
         회원가입
     </div>
 }
-export default singUp
+export default SingUp
