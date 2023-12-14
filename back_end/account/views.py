@@ -5,14 +5,14 @@ from rest_framework.permissions import AllowAny
 from rest_framework.viewsets import ModelViewSet
 from .serializers import PostSerializer
 from .models import Post
-# from .serializers import SignupSerializer
-# class SingupView(CreateAPIView):
-#     model=get_user_model()
-#     serializer_class= SignupSerializer
-#     permission_classes=[
-#         AllowAny,
-#     ]
-#     pass
+from .serializers import SignupSerializer
+class SingupView(CreateAPIView):
+    model=get_user_model()
+    serializer_class= SignupSerializer
+    permission_classes=[
+        AllowAny,
+    ]
+    pass
 class PostViewSet(ModelViewSet):
     queryset=Post.objects.all()
     serializer_class=PostSerializer
