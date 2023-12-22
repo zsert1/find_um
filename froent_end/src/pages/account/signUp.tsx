@@ -1,22 +1,25 @@
 import Axios from 'axios';
 import React, {useEffect, useState} from 'react';
 import {Button, Form, Input, notification} from 'antd';
+import {useNavigate} from 'react-router-dom';
 type FieldType = {
   username?: string;
   password?: string;
 };
 const SingUp = () => {
+  const navigate = useNavigate();
   // const [filedErrors, setFieldErrors] = useState({});
   const onFinish = values => {
     const fn = async () => {
       const {username, password} = values;
       const data = {username, password};
       try {
-        await Axios.post('http://127.0.0.1:8000/account/singup/', data);
+        await Axios.post('http://127.0.0.1:8000/singup/', data);
         notification.open({
           message: '회원가입 성공',
           description: '로그인 페이지로 이동합니다',
         });
+        navigate('/');
       } catch (error) {
         if (error.response) {
           notification.open({

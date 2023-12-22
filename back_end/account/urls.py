@@ -7,7 +7,6 @@ from rest_framework_simplejwt.views import (
 )
 from . import views
 router=DefaultRouter()
-router.register('post',views.PostViewSet) #2개의 URL을 만들어준다
 urlpatterns = [
     path('',include(router.urls)),
     path('token/', TokenObtainPairView.as_view(), name='token_obtain_pair'),
