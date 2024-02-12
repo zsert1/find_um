@@ -2,7 +2,7 @@ import React from 'react';
 import {Route, Routes} from 'react-router-dom';
 import SingUp from './account/signUp';
 
-const Root = () => {
+const App = () => {
   return (
     <Routes>
       <Route path="/"></Route>
@@ -10,4 +10,4 @@ const Root = () => {
     </Routes>
   );
 };
-export default Root;
+export default App;
